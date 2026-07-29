@@ -1,0 +1,12 @@
+metadata:
+  organization: QuantSkills
+  organization_url: https://github.com/quantskills
+  repository: skill-a-share-pit-fundamental-vintage-builder
+  repository_url: https://github.com/quantskills/skill-a-share-pit-fundamental-vintage-builder
+  project_type: skill
+  collection: a-share-financial-data-quality
+
+project:
+  status: community-project
+  maintainer: repository-contributors
+  scope: a-share-pit-financial-report-vintages-and-look-ahead-auditing
