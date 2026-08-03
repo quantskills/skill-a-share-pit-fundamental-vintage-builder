@@ -24,6 +24,14 @@ It complements generic factor-backtest tools: this Skill establishes that the in
 - Maintainer: repository contributors. After publication, report reproducible defects, data-contract changes, and methodology issues through the repository issue tracker.
 - Intended repository identity: `quantskills/skill-a-share-pit-fundamental-vintage-builder`. See [skill.yml](skill.yml) for machine-readable metadata.
 
+## Runtime Entrypoints
+
+- Codex and Claude Code: read the root [SKILL.md](SKILL.md).
+- Cursor: read [agents/cursor-rule.mdc](agents/cursor-rule.mdc).
+- Hermes and OpenClaw: read [agents/portable-loader.md](agents/portable-loader.md).
+- OpenClaw-compatible interface metadata: see [agents/openai.yaml](agents/openai.yaml).
+
+Every entrypoint treats `SKILL.md` as the single source of workflow truth, including the secure first-live-request login flow and PIT lineage requirements.
 ## Supported Scenarios
 
 1. Build monthly or custom-rebalance PIT financial panels for specified A-share securities.
@@ -48,7 +56,9 @@ Read [SKILL.md](SKILL.md) for the complete agent workflow and commands. At the f
 SKILL.md                              Agent workflow and delivery requirements
 README.md                             Chinese project documentation
 README.en.md                          English project documentation
+LICENSE                               GNU GPLv3 license text
 skill.yml                             QuantSkills project metadata
+agents/                               Cursor, Hermes, and OpenClaw runtime entrypoints
 scripts/build_pit_panel.py            Panda Data PIT panel builder
 scripts/audit_backtest_input.py       Panel, schedule, and Python code auditor
 scripts/derive_fundamental_factors.py Single-quarter, TTM, and basic factor derivation

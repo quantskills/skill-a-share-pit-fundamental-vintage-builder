@@ -24,6 +24,14 @@
 - 维护者：仓库贡献者。发布后，请通过仓库 Issue 反馈可复现缺陷、数据契约变化和方法论问题。
 - 目标仓库标识：`quantskills/skill-a-share-pit-fundamental-vintage-builder`。机器可读元数据见 [skill.yml](skill.yml)。
 
+## 运行时入口
+
+- Codex 与 Claude Code：读取根目录 [SKILL.md](SKILL.md)。
+- Cursor：读取 [agents/cursor-rule.mdc](agents/cursor-rule.mdc)。
+- Hermes 与 OpenClaw：读取 [agents/portable-loader.md](agents/portable-loader.md)。
+- OpenClaw 兼容的界面元数据：见 [agents/openai.yaml](agents/openai.yaml)。
+
+各入口均以 `SKILL.md` 为唯一工作流来源，尤其要求在首次实时 Panda Data 请求前走安全登录流程，并保持 PIT 数据血缘字段。
 ## 支持场景
 
 1. 为指定 A 股证券构建按月或自定义调仓日的 PIT 财务面板。
@@ -48,7 +56,9 @@
 SKILL.md                              Agent 工作流与交付要求
 README.md                             中文项目说明
 README.en.md                          English project documentation
+LICENSE                               GNU GPLv3 许可证原文
 skill.yml                             QuantSkills 项目元数据
+agents/                               Cursor、Hermes 与 OpenClaw 运行时入口
 scripts/build_pit_panel.py            Panda Data PIT 面板构建器
 scripts/audit_backtest_input.py       面板、调仓日与 Python 代码审计器
 scripts/derive_fundamental_factors.py 单季、TTM 与基础因子派生器

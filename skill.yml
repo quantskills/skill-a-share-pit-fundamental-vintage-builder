@@ -5,8 +5,10 @@ metadata:
   repository_url: https://github.com/quantskills/skill-a-share-pit-fundamental-vintage-builder
   project_type: skill
   collection: a-share-financial-data-quality
+  license: GPL-3.0-only
 
 project:
   status: community-project
   maintainer: repository-contributors
   scope: a-share-pit-financial-report-vintages-and-look-ahead-auditing
+  license: GPL-3.0-only
