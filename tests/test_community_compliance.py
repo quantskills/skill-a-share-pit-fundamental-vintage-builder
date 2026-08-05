@@ -53,6 +53,16 @@ class CommunityComplianceTests(unittest.TestCase):
         self.assertIn("validation_level: listed", frontmatter)
         self.assertIn("maintainer_type: community", frontmatter)
 
+    def test_uses_chinese_for_user_facing_skill_instructions(self) -> None:
+        skill_text = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        body = skill_text.split("---", 2)[2]
+
+        self.assertIn("# A 股财务因子回测防前视助手", body)
+        self.assertIn("## 首次交互", body)
+        self.assertIn("## 批量调仓工作流", body)
+        self.assertNotIn("# A-Share Financial Factor Backtest Anti-Lookahead Assistant", body)
+        self.assertNotIn("## First Interaction", body)
+
 
 if __name__ == "__main__":
     unittest.main()
