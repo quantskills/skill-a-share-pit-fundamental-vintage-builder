@@ -38,6 +38,21 @@ class CommunityComplianceTests(unittest.TestCase):
         self.assertIn("allow_implicit_invocation: true", adapter_text)
         self.assertIn("$skill-a-share-pit-fundamental-vintage-builder", adapter_text)
 
+    def test_declares_localized_quant_skills_card_metadata(self) -> None:
+        skill_text = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        frontmatter = skill_text.split("---", 2)[1]
+
+        self.assertIn("quantSkills:", frontmatter)
+        self.assertIn("category: tooling", frontmatter)
+        self.assertIn("summary_zh:", frontmatter)
+        self.assertIn("summary_en:", frontmatter)
+        self.assertIn("构建并审计 A 股财务因子 PIT 输入", frontmatter)
+        self.assertIn("Build and audit A-share PIT financial inputs", frontmatter)
+        self.assertIn("platforms:", frontmatter)
+        self.assertIn("status: active", frontmatter)
+        self.assertIn("validation_level: listed", frontmatter)
+        self.assertIn("maintainer_type: community", frontmatter)
+
 
 if __name__ == "__main__":
     unittest.main()

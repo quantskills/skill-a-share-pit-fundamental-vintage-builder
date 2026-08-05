@@ -1,6 +1,26 @@
 ---
 name: skill-a-share-pit-fundamental-vintage-builder
 description: Use when building or auditing A-share financial-factor backtests that must avoid look-ahead bias from current or restated financial reports. Produces historical as-of financial datasets for rebalance dates and verifies whether factor/backtest inputs used only information tradable at the time.
+quantSkills:
+  category: tooling
+  tags:
+    - a-share
+    - pit
+    - financial-data
+    - look-ahead-bias
+    - pandadata
+  platforms:
+    - claude-code
+    - codex
+    - openclaw
+    - cursor
+  status: active
+  requires: []
+  summary_zh: "构建并审计 A 股财务因子 PIT 输入，避免财报披露时点与后续修订造成前视偏差。"
+  summary_en: "Build and audit A-share PIT financial inputs to prevent look-ahead bias from report availability and restatements."
+  license: GPL-3.0-only
+  validation_level: listed
+  maintainer_type: community
 ---
 
 # A-Share Financial Factor Backtest Anti-Lookahead Assistant
