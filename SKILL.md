@@ -207,3 +207,7 @@ python scripts/generate_research_summary.py `
 - PIT 财务面板只消除一种前视偏差，不能解决幸存者偏差、公司行为处理、交易成本或模型过拟合。
 
 扩展数据模型或修改可用性逻辑前，阅读 [references/data-contract.md](references/data-contract.md)。
+
+## Pandadata compatibility
+
+[Pandadata 1.0.6 compatibility](references/pandadata-compatibility.md) — exact SDK baseline, validation scope, and shared guidance for all supported agent runtimes.
