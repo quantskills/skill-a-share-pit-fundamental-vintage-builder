@@ -76,3 +76,6 @@ evals/evals.json                      Representative user requests
 This Skill mitigates only one kind of look-ahead bias: timing leakage caused by financial-report availability and restatements. It does not address survivorship bias, corporate actions, delisting returns, execution-price assumptions, transaction costs, liquidity, taxes, vendor errors, or model overfitting. Static code checks provide evidence, not proof that an entire strategy is leakage-free.
 
 For research and educational purposes only. It does not provide investment advice, trading instructions, suitability assessments, or performance guarantees.
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.
